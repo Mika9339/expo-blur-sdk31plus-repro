@@ -46,7 +46,7 @@ ScrollView.onScrollChanged() / computeScroll()
 View.draw()                                     <- the blur target, drawn from updateBlur()
 ```
 
-So the crash is in the Dimezis library itself: it needs to keep the canvas it saved on, or postpone re-initializing until the current `updateBlur()` has finished. The same crash happens with `blurMethod="dimezisBlurView"` on any Android version below 12. An older report is [Dimezis/BlurView#184](https://github.com/Dimezis/BlurView/issues/184).
+So the crash is in the Dimezis library itself: it needs to keep the canvas it saved on, or postpone re-initializing until the current `updateBlur()` has finished. The same crash happens with `blurMethod="dimezisBlurView"` on any Android version below 12. I reported it as [Dimezis/BlurView#273](https://github.com/Dimezis/BlurView/issues/273). An older report of the same crash is [Dimezis/BlurView#184](https://github.com/Dimezis/BlurView/issues/184).
 
 ## The expo-blur part
 
