@@ -1,0 +1,13 @@
+diff --git a/android/src/main/java/expo/modules/blur/ExpoBlurView.kt b/android/src/main/java/expo/modules/blur/ExpoBlurView.kt
+index 213c076..523fe33 100644
+--- a/android/src/main/java/expo/modules/blur/ExpoBlurView.kt
++++ b/android/src/main/java/expo/modules/blur/ExpoBlurView.kt
+@@ -71,6 +71,8 @@ class ExpoBlurView(context: Context, appContext: AppContext) : ExpoView(context,
+ 
+     this.blurTargetId = blurTargetId
+     configureBlurView()
++    // setupWith turns the blur on; the method (e.g. no blur below API 31), radius and tint must follow.
++    applyCurrentBlurSettings()
+   }
+ 
+   fun setBlurRadius(radius: Float) {
